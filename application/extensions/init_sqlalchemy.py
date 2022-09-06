@@ -4,4 +4,5 @@ db = SQLAlchemy()
 
 
 def init_database(app):
-    db.init()
+    db.init_app(app)
+    session = db.session

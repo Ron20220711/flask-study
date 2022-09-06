@@ -10,13 +10,14 @@ class BaseConfig:
     REDIS_HOST = os.getenv('REDIS_HOST') or "127.0.0.1"
     REDIS_PORT = int(os.getenv('REDIS_PORT') or 6379)
     # mysql 配置
-    MYSQL_USERNAME = os.getenv('MYSQL_USERNAME') or "root"
-    MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD') or "123456"
-    MYSQL_HOST = os.getenv('MYSQL_HOST') or "127.0.0.1"
-    MYSQL_PORT = int(os.getenv('MYSQL_PORT') or 3306)
-    MYSQL_DATABASE = os.getenv('MYSQL_DATABASE') or "PearAdminFlask"
+    USERNAME = "sa"
+    PASSWORD = "135781011"
+    HOST = "127.0.0.1"
+    PORT = 3306
+    DATABASE = "test"
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
     # mysql 数据库的配置信息
-    SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{MYSQL_USERNAME}:{urlquote(MYSQL_PASSWORD)}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DATABASE}?charset=utf8mb4"
+    SQLALCHEMY_DATABASE_URI = f"mssql+pymysql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}?charset=utf8"
     # 默认日志等级
     LOG_LEVEL = logging.WARN
     # 默认邮件配置

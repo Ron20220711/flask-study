@@ -1,5 +1,5 @@
 from flask import Flask
-from application.configs import config
+from application.configs.config import config
 from application.extensions import init_plugs
 
 
@@ -12,4 +12,6 @@ def create_app(config_name=None):
     # 注册插件
     init_plugs(app)
     # 注册路由
-    init_view(app)
+    # init_view(app)
+    app.run()
+    return app
