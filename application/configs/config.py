@@ -11,13 +11,13 @@ class BaseConfig:
     REDIS_PORT = int(os.getenv('REDIS_PORT') or 6379)
     # mysql 配置
     USERNAME = "sa"
-    PASSWORD = "135781011"
+    PASSWORD = 135781011
     HOST = "127.0.0.1"
-    PORT = 3306
+    PORT = 1433
     DATABASE = "test"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     # mysql 数据库的配置信息
-    SQLALCHEMY_DATABASE_URI = f"mssql+pymysql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}?charset=utf8"
+    SQLALCHEMY_DATABASE_URI = f"mssql+pymssql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}?charset=utf8"
     # 默认日志等级
     LOG_LEVEL = logging.WARN
     # 默认邮件配置
