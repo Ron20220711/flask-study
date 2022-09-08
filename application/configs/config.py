@@ -16,6 +16,8 @@ class BaseConfig:
     PORT = 1433
     DATABASE = "test"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
+    # 查询时会显示原始SQL语句
+    SQLALCHEMY_ECHO = True
     # mysql 数据库的配置信息
     SQLALCHEMY_DATABASE_URI = f"mssql+pymssql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}?charset=utf8"
     # 默认日志等级

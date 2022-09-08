@@ -3,6 +3,8 @@ from application.configs.config import config
 from application.extensions import init_plugs
 
 
+
+
 def create_app(config_name=None):
     app = Flask(__name__)
     if not config_name:
@@ -13,5 +15,4 @@ def create_app(config_name=None):
     init_plugs(app)
     # 注册路由
     # init_view(app)
-    app.run()
     return app

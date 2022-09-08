@@ -1,12 +1,12 @@
 from application import create_app
-from application.extensions import db
 
 app = create_app("development")
 
-@app.route('/')
+
+@app.route('/', methods=['POST','GET'])
 def hello_world():
-    res = list(db.session.execute("select 1"))
-    return res
+    return "aaa"
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
